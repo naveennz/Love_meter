@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Love Meter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <!-- PAGE 1 -->
+  <section class="page active" id="page1">
+    <div class="card" style="text-align:center">
+      <h1>love meter</h1>
+      <div class="shape">
+        <svg viewBox="0 0 600 400" aria-hidden="true">
+          <path id="heart"
+            d="M300 330 C 260 300, 120 230, 120 150
+               C 120 95, 165 60, 210 60
+               C 250 60, 280 85, 300 110
+               C 320 85, 350 60, 390 60
+               C 435 60, 480 95, 480 150
+               C 480 230, 340 300, 300 330 Z"
+            fill="#fff" stroke="#111" stroke-width="6" />
+          <clipPath id="clipHeart"><use href="#heart"/></clipPath>
+          <g clip-path="url(#clipHeart)">
+            <rect id="fill" x="0" y="400" width="600" height="400" fill="var(--yellow)"/>
+          </g>
+        </svg>
+      </div>
+      <div class="meterWrap">
+        <div class="meterBarOuter"><div class="meterBarInner" id="bar"></div></div>
+        <div class="tiny" id="pct">0%</div>
+      </div>
+      <div class="center" style="margin-top:16px">
+        <button class="cta yellow" id="go1">❤️ lets go</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 2 -->
+  <section class="page" id="page2">
+    <div class="card" style="text-align:center">
+      <h2>Are u ready</h2>
+      <div class="playground" id="arena" style="margin-top:12px">
+        <button class="cta red noBtn" id="noBtn">No</button>
+        <button class="cta blue yesBtn" id="yesBtn">Yes</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 3 -->
+  <section class="page" id="page3">
+    <div class="card" style="text-align:center">
+      <h2>When is my birthday?</h2>
+      <div class="center" style="margin-top:8px">
+        <button class="cta yellow" data-answer="Sunday">Sunday</button>
+        <button class="cta blue" data-answer="Tuesday">Tuesday</button>
+        <button class="cta green" data-answer="Friday">Friday</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 4 -->
+  <section class="page" id="page4">
+    <div class="card" style="text-align:center">
+      <div class="sad"><div class="mouth"></div></div>
+      <h2>Ur answer is incorrect</h2>
+      <div class="punish">U have to get punished</div>
+      <div class="center"><button class="cta yellow" id="okayBtn">okay</button></div>
+    </div>
+  </section>
+
+  <!-- PAGE 5 -->
+  <section class="page" id="page5">
+    <div class="card">
+      <h2>choose one from here</h2>
+      <div class="grid" id="cardGrid">
+        <div class="flip" data-card="1">
+          <div class="flipInner">
+            <div class="face front front1">
+              <span class="art heart a1">♥</span>
+              <span class="art star a2">★</span>
+              <span class="optionTag">option 1</span>
+            </div>
+            <div class="face back"><h3>Feed ur baby</h3></div>
+          </div>
+        </div>
+        <div class="flip" data-card="2">
+          <div class="flipInner">
+            <div class="face front front2">
+              <span class="art heart a1">♥</span>
+              <span class="art star a2">★</span>
+              <span class="optionTag">option 2</span>
+            </div>
+            <div class="face back"><h3>Feed ur baby</h3></div>
+          </div>
+        </div>
+        <div class="flip" data-card="3">
+          <div class="flipInner">
+            <div class="face front front3">
+              <span class="art heart a1">♥</span>
+              <span class="art star a2">★</span>
+              <span class="optionTag">option 3</span>
+            </div>
+            <div class="face back"><h3>Feed ur baby</h3></div>
+          </div>
+        </div>
+      </div>
+      <div class="center" style="margin-top:16px">
+        <a class="cta" href="#" id="restart" style="background:#fff">Play again</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
